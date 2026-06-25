@@ -1,0 +1,26 @@
+{
+  "name": "totalonion/onion-seopress-helper",
+  "description": "Additional tools and settings for SEOPress",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0",
+  "homepage": "https://totalonion.com",
+  "version": "1.3.6",
+  "authors": [
+    {
+      "name": "Total Onion",
+      "homepage": "https://totalonion.com"
+    }
+  ],
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "cli",
+    "developer"
+  ],
+  "require": {
+    "php": ">=8.0"
+  },
+  "extra": {
+    "installer-name": "onion-seopress-helper"
+  }
+}

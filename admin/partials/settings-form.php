@@ -5,7 +5,7 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       https://heavyweightagency.co.uk/
+ * @link       https://totalonion.com/
  * @since      1.1.0
  *
  * @package    Onion_Seopress_Helper

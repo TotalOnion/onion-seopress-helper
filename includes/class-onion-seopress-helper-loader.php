@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       https://heavyweightagency.co.uk/
+ * @link       https://totalonion.com/
  * @since      1.0.0
  *
  * @package    Onion_Seopress_Helper
@@ -19,7 +19,7 @@
  *
  * @package    Onion_Seopress_Helper
  * @subpackage Onion_Seopress_Helper/includes
- * @author     Heavyweight <enquiries@heavyweightagency.co.uk>
+ * @author     Total Onion <enquiries@totalonion.com>
  */
 class Onion_Seopress_Helper_Loader {
 

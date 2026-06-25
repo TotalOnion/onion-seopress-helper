@@ -3,7 +3,7 @@
 /**
  * Fired during plugin activation
  *
- * @link       https://heavyweightagency.co.uk/
+ * @link       https://totalonion.com/
  * @since      1.0.0
  *
  * @package    Onion_Seopress_Helper
@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    Onion_Seopress_Helper
  * @subpackage Onion_Seopress_Helper/includes
- * @author     Heavyweight <enquiries@heavyweightagency.co.uk>
+ * @author     Total Onion <enquiries@totalonion.com>
  */
 class Onion_Seopress_Helper_Activator {
 
@@ -30,26 +30,12 @@ class Onion_Seopress_Helper_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-		// PR Core is required !
-		$pr_core_plugin = 'pr-core/pr-core.php';
-		if (
-			! file_exists( trailingslashit( WPMU_PLUGIN_DIR ) . $pr_core_plugin )
-			&& ! is_plugin_active( $pr_core_plugin )
-		) {
-			wp_die(
-				__(
-					'You must activate <strong>PR CORE plugin</strong> to activate this plugin. <br><a href="' . admin_url( 'plugins.php' ) . '">Return to Plugins page</a>',
-					'pr-seopress-helper'
-				)
-			);
-		}
-
 		// WPML is required
 		if ( ! is_plugin_active( 'sitepress-multilingual-cms/sitepress.php' ) ) {
 			wp_die(
 				__(
 					'This plugin is not needed if WPML is not installed and activated. Cancelling activation',
-					'pr-seopress-helper'
+					'onion-seopress-helper'
 				)
 			);
 		}
@@ -59,7 +45,7 @@ class Onion_Seopress_Helper_Activator {
 			wp_die(
 				__(
 					'This plugin is not needed if SEOPress is not installed and activated. Cancelling activation',
-					'pr-seopress-helper'
+					'onion-seopress-helper'
 				)
 			);
 		}

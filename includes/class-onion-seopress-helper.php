@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       https://heavyweightagency.co.uk/
+ * @link       https://totalonion.com/
  * @since      1.0.0
  *
  * @package    Onion_Seopress_Helper
@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Onion_Seopress_Helper
  * @subpackage Onion_Seopress_Helper/includes
- * @author     Heavyweight <enquiries@heavyweightagency.co.uk>
+ * @author     Total Onion <enquiries@totalonion.com>
  */
 class Onion_Seopress_Helper {
 
@@ -72,7 +72,7 @@ class Onion_Seopress_Helper {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'pr-seopress-helper';
+		$this->plugin_name = 'onion-seopress-helper';
 
 		$this->load_dependencies();
 		//$this->set_locale();

@@ -8,20 +8,20 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://heavyweightagency.co.uk/
+ * @link              https://totalonion.com/
  * @since             1.0.0
  * @package           Onion_Seopress_Helper
  *
  * @wordpress-plugin
  * Plugin Name:       SEOPress Helper
- * Plugin URI:        https://bitbucket.org/pernod-ricard/wordpress-plugin-pr-seopress-helper
+ * Plugin URI:        https://bitbucket.org/pernod-ricard/wordpress-plugin-onion-seopress-helper
  * Description:       A plugin to allow sitemaps to account for "hidden" markets in WPML
  * Version:           1.3.6
- * Author:            Heavyweight
- * Author URI:        https://heavyweightagency.co.uk/
+ * Author:            Total Onion
+ * Author URI:        https://totalonion.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       pr-seopress-helper
+ * Text Domain:       onion-seopress-helper
  * Domain Path:       /languages
  */
 
@@ -37,7 +37,7 @@ if ( ! defined( 'WPINC' ) ) {
  */
 define( 'ONION_SEOPRESS_HELPER_VERSION', '1.3.6' );
 define( 'ONION_SEOPRESS_HELPER_NAME', 'onion_seopress_helper' );
-define( 'ONION_SEOPRESS_HELPER_SLUG', 'pr-seopress-helper' );
+define( 'ONION_SEOPRESS_HELPER_SLUG', 'onion-seopress-helper' );
 
 /**
  * The code that runs during plugin activation.
