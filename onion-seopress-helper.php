@@ -16,7 +16,7 @@
  * Plugin Name:       SEOPress Helper
  * Plugin URI:        https://bitbucket.org/pernod-ricard/wordpress-plugin-onion-seopress-helper
  * Description:       A plugin to allow sitemaps to account for "hidden" markets in WPML
- * Version:           1.3.6
+ * Version:           1.4.0
  * Author:            Total Onion
  * Author URI:        https://totalonion.com/
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'ONION_SEOPRESS_HELPER_VERSION', '1.3.6' );
+define( 'ONION_SEOPRESS_HELPER_VERSION', '1.4.0' );
 define( 'ONION_SEOPRESS_HELPER_NAME', 'onion_seopress_helper' );
 define( 'ONION_SEOPRESS_HELPER_SLUG', 'onion-seopress-helper' );
 
