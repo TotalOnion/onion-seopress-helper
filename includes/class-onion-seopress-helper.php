@@ -122,6 +122,8 @@ class Onion_Seopress_Helper {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-onion-seopress-helper-admin.php';
 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-onion-seopress-helper-sitemaps.php';
+
 		$this->loader = new Onion_Seopress_Helper_Loader();
 
 	}
@@ -191,6 +193,13 @@ class Onion_Seopress_Helper {
 			$this->loader->add_filter( 'seopress_metabox_seo_tabs', $admin, 'remove_seopress_redirections_tab' );
 			// Disable automatic redirect notices in WP admin (MNB-323)
 			$this->loader->add_filter( 'seopress_post_automatic_redirect', $admin, 'disable_seopress_automatic_redirect' );
+		}
+
+		$group_sitemaps = get_option( ONION_SEOPRESS_HELPER_NAME . '_sitemaps_group' );
+		if ( $group_sitemaps ) {
+			$sitemap_helper = new Onion_Seopress_Helper_Sitemaps( $this->get_plugin_name(), $this->get_version() );
+			$this->loader->add_filter( 'seopress_sitemaps_single_query', $sitemap_helper, 'seo_filter_sitemap_languages', 10 );
+			$this->loader->add_filter( 'seopress_sitemaps_xml_index', $sitemap_helper, 'seo_filter_sitemap_index_xml', 20 );
 		}
 	}
 

@@ -174,6 +174,38 @@ class Onion_Seopress_Helper_Admin
             ONION_SEOPRESS_HELPER_SLUG . '-settings-page',      // Slug of the page to show this on (defined in registerPage above)
             ONION_SEOPRESS_HELPER_NAME . '_switches_section'    // slug of the sction the field appears in
         );
+
+        // Group Sitemaps by Market Option
+
+        // Add the option
+        add_option(ONION_SEOPRESS_HELPER_NAME . '_sitemaps_group');
+
+        // Mark the above Option as a Setting we can edit in the admin
+        // reference https://developer.wordpress.org/reference/functions/register_setting/
+        register_setting(
+            ONION_SEOPRESS_HELPER_NAME . '_options',
+            ONION_SEOPRESS_HELPER_NAME . '_sitemaps_group',
+            array(
+            'type'         => 'number',
+            'description'  => 'Group Sitemaps by markets as well as Post Types',
+            'show_in_rest' => false,
+            'default'      => '',
+            )
+        );
+
+        // This adds the html field that renders the setting
+        // reference https://developer.wordpress.org/reference/functions/add_settings_field/
+        add_settings_field(
+            ONION_SEOPRESS_HELPER_NAME . '_sitemaps_group',           // id="" value
+            __('Group Sitemaps', 'PR SEOPress Helper'),       // <label> vale
+            array( $this, 'render_generic_checkbox' ),   // callback to actually do the rendering of the input
+            ONION_SEOPRESS_HELPER_SLUG . '-settings-page',      // Slug of the page to show this on (defined in registerPage above)
+            ONION_SEOPRESS_HELPER_NAME . '_switches_section',    // slug of the sction the field appears in
+            array (
+                'id' => ONION_SEOPRESS_HELPER_NAME . '_sitemaps_group',
+                'label_for' => 'Group Sitemaps by markets as well as Post Types'
+            )
+        );
     }
 
     /**
@@ -266,6 +298,25 @@ class Onion_Seopress_Helper_Admin
             }
             include __DIR__ . '/partials/basic-checkbox.php';
         }
+    }
+
+    /**
+     * Render the field itself
+     *
+     * @since 1.4.0
+     */
+    public function render_generic_checkbox($field)
+    {
+        $option  = get_option($field['id']);
+        $slug = $field['id'];
+        $field_name = $field['id'];
+        $label = $field['label_for'];
+        $field_id = $field['id'];
+        $field_enabled = false;
+        if ( $option ) {
+            $field_enabled = true;
+        }
+        include __DIR__ . '/partials/basic-checkbox.php';
     }
 
 
